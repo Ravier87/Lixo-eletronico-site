@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Correto de Lixo Eletrônico</title>
+
+    <style>
+        /* ======== ESTILOS GERAIS ======== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f8f6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        section {
+            padding: 30px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        /* ======== CARDS DE LOCAIS ======== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ======== BOTÃO ======== */
+        button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
+        }
+
+        #dicas {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* ======== RODAPÉ ======== */
+        footer {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======== CABEÇALHO ======== -->
+    <header>
+        <h1>Descarte Correto de Lixo Eletrônico</h1>
+        <p>Aprenda como e onde descartar seus eletrônicos de forma sustentável.</p>
+    </header>
+
+    <!-- ======== SEÇÃO DE LOCAIS ======== -->
+    <section>
+        <h2>Locais de Coleta</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Centro de Reciclagem Municipal</h3>
+                <p>Recebe computadores, celulares e acessórios inutilizados.</p>
+            </div>
+            <div class="card">
+                <h3>Loja VerdeTech</h3>
+                <p>Programa de coleta de eletrônicos antigos com reaproveitamento de peças.</p>
+            </div>
+            <div class="card">
+                <h3>EcoPonto Bairro Central</h3>
+                <p>Descarte seguro de baterias, cabos e pequenos eletrônicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== SEÇÃO DE DICAS INTERATIVAS ======== -->
+    <section>
+        <h2>Dicas de Descarte</h2>
+        <button onclick="mostrarDicas()">Mostrar/Esconder Dicas</button>
+        <div id="dicas">
+            <p>📌 Apague dados pessoais antes de descartar computadores e celulares.</p>
+            <p>📌 Separe cabos, pilhas e acessórios para reciclagem adequada.</p>
+            <p>📌 Prefira levar aos pontos de coleta autorizados mais próximos.</p>
+        </div>
+    </section>
+
+    <!-- ======== RODAPÉ ======== -->
+    <footer>
+        <p>Projeto Educativo - HTML, CSS e JavaScript | Conscientização sobre Lixo Eletrônico</p>
+    </footer>
+
+    <!-- ======== SCRIPT JAVASCRIPT ======== -->
+    <script>
+        function mostrarDicas() {
+            let dicas = document.getElementById("dicas");
+            if (dicas.style.display === "none") {
+                dicas.style.display = "block";
+            } else {
+                dicas.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
